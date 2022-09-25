@@ -4,8 +4,8 @@ import pandas as pd
 import requests
 
 # %% Set Access Token and Instance URL
-access_token = "<enter_here>"
-instance_url = "<enter_here>"
+access_token = ""
+instance_url = ""
 
 # %%
 def sf_api_call(action, parameters = {}, method = 'get', data = {}):
@@ -62,5 +62,5 @@ def query_sf(query):
 query = '''
 SELECT Id, Name, BillingCity FROM Account LIMIT 10
 '''
-query_sf(query)
-# %%
+data_df = query_sf(query)
+print(data_df)
